@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: sys-monitor-circuitbreaker
+  security:
+    user:
+      name: user
+      password: security
+
+server:
+  port: 8888
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:security@localhost:8761/eureka/ #,http://user:security@localhost:8762/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    hostname: localhost
+    instance-id: ${eureka.instance.hostname}:${server.port}
+    prefer-ip-address: true
+    metadata-map:
+      user.name: ${spring.security.user.name}
+      user.password: ${spring.security.user.password}
+
+turbine:
+  #app-config: APP-
+  cluster-name-expression: default
+  aggregator:
+    cluster-config: default

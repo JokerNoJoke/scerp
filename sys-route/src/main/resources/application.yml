@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: sys-route
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+server:
+  port: 80
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:security@localhost:8761/eureka/ #,http://user:security@localhost:8762/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    hostname: localhost
+    instance-id: ${eureka.instance.hostname}:${server.port}
+    prefer-ip-address: true
+
+logging:
+  level:
+    web: debug
