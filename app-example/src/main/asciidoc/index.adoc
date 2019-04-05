@@ -1,0 +1,11 @@
+= REST API
+Doc Writer <doc.writer@asciidoctor.org>
+v1.0
+:icons: font
+:toc: left
+
+== Index request
+operation::index[]
+
+== Remote request
+operation::remote[]
