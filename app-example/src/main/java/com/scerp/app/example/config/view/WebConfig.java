@@ -11,6 +11,7 @@ import org.springframework.format.datetime.DateFormatter;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.web.servlet.config.annotation.AsyncSupportConfigurer;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.util.concurrent.ThreadPoolExecutor;
@@ -26,6 +27,17 @@ public class WebConfig implements WebMvcConfigurer {
     private WebCallableProcessingInterceptor webCallableProcessingInterceptor;
     @Autowired
     private WebDeferredResultProcessingInterceptor webDeferredResultProcessingInterceptor;
+
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(webHandlerInterceptor);
+        registry.addInterceptor(webAsyncHandlerInterceptor);
+    }
+
+    @Override
+    public void addFormatters(FormatterRegistry registry) {
+        registry.addFormatter(new DateFormatter("yyyy-MM-dd"));
+    }
 
     @Override
     public void configureAsyncSupport(AsyncSupportConfigurer configurer) {
@@ -47,14 +59,10 @@ public class WebConfig implements WebMvcConfigurer {
     }
 
     @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(webHandlerInterceptor);
-        registry.addInterceptor(webAsyncHandlerInterceptor);
-    }
-
-    @Override
-    public void addFormatters(FormatterRegistry registry) {
-        registry.addFormatter(new DateFormatter("yyyy-MM-dd"));
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/resources/**")
+                .addResourceLocations("/public", "classpath:/static/")
+                .setCachePeriod(31556926);
     }
 
 }
