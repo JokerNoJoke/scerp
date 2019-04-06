@@ -42,7 +42,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void configureAsyncSupport(AsyncSupportConfigurer configurer) {
         ThreadPoolTaskExecutor webThreadPool = new ThreadPoolTaskExecutor();
-        webThreadPool.setThreadNamePrefix("web-thread-pool-");
+        webThreadPool.setThreadNamePrefix("TP-WEB-");
         webThreadPool.setCorePoolSize(6);
         webThreadPool.setMaxPoolSize(666);
         webThreadPool.setKeepAliveSeconds(666);
