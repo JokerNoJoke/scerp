@@ -1,4 +1,4 @@
-package com.scerp.app.example.exception;
+package com.scerp.app.example.config.web.exception;
 
 /**
  * App custom exception

@@ -13,6 +13,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public interface EurekaOuterService {
 
     @GetMapping
-    IPInfo get();
+    IPInfo execute();
 
 }

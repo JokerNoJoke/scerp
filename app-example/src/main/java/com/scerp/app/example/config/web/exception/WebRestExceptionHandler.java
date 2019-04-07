@@ -1,6 +1,5 @@
-package com.scerp.app.example.config.web.handler;
+package com.scerp.app.example.config.web.exception;
 
-import com.scerp.app.example.exception.AppException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -10,9 +9,10 @@ import java.util.Map;
 
 /**
  * Aspect try  Exception it can shield ExceptionHandler
+ * You can extends ResponseEntityExceptionHandler
  */
 @RestControllerAdvice(annotations = RestController.class)
-public class WebRestControllerAdvice {
+public class WebRestExceptionHandler {
 
     @ExceptionHandler(value = AppException.class)
     public Map exceptionHandler(AppException e) {
