@@ -1,6 +1,6 @@
-package com.scerp.app.example.view.service.fallback;
+package com.scerp.app.example.web.client.fallback;
 
-import com.scerp.app.example.view.service.EurekaInnerService;
+import com.scerp.app.example.web.client.EurekaInnerService;
 import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;
 

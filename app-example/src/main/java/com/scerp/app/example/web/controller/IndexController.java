@@ -1,8 +1,8 @@
-package com.scerp.app.example.view.controller;
+package com.scerp.app.example.web.controller;
 
 import com.scerp.app.example.model.entity.IPInfo;
-import com.scerp.app.example.view.service.CircuitBreakerService;
-import com.scerp.app.example.view.service.EurekaOuterService;
+import com.scerp.app.example.web.service.CircuitBreakerService;
+import com.scerp.app.example.web.client.EurekaOuterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

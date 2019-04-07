@@ -1,4 +1,4 @@
-package com.scerp.app.example.config.view.handler;
+package com.scerp.app.example.config.web.handler;
 
 import com.scerp.app.example.exception.AppException;
 import org.springframework.web.bind.annotation.ExceptionHandler;

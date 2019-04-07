@@ -1,4 +1,4 @@
-package com.scerp.app.example.config.view.interceptor;
+package com.scerp.app.example.config.web.interceptor;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;

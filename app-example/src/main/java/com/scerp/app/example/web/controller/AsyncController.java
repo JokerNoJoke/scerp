@@ -1,4 +1,4 @@
-package com.scerp.app.example.view.controller;
+package com.scerp.app.example.web.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

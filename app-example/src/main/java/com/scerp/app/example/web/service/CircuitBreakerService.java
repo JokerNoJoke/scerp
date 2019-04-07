@@ -1,4 +1,4 @@
-package com.scerp.app.example.view.service;
+package com.scerp.app.example.web.service;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;

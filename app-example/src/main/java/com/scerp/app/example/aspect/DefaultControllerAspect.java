@@ -12,7 +12,7 @@ public class DefaultControllerAspect {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Pointcut("execution(* com.scerp.app.example.view.controller.*.*(..))")
+    @Pointcut("execution(* com.scerp.app.example.web.controller.*.*(..))")
     private void anyOldTransfer() {
     }
 

@@ -1,4 +1,4 @@
-package com.scerp.app.example.config.view.handler;
+package com.scerp.app.example.config.web.handler;
 
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;

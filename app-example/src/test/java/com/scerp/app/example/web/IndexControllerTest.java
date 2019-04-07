@@ -1,4 +1,4 @@
-package com.scerp.app.example.view;
+package com.scerp.app.example.web;
 
 import com.scerp.app.example.AppExampleApplicationRESTDoc;
 import org.junit.Test;
