@@ -23,8 +23,7 @@ public class AsyncTask {
             e.printStackTrace();
         }
         logger.info(
-                new StringBuffer(this.getClass().getName())
-                        .append(Thread.currentThread().getName())
+                new StringBuffer(Thread.currentThread().getName())
                         .append(":")
                         .append(LocalDateTime.now().toString())
                         .toString()

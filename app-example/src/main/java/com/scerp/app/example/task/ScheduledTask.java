@@ -21,8 +21,7 @@ public class ScheduledTask {
     @Scheduled(initialDelay = 6L, fixedRate = 666666L)
     public void scheduled() {
         logger.info(
-                new StringBuffer(this.getClass().getName())
-                        .append(Thread.currentThread().getName())
+                new StringBuffer(Thread.currentThread().getName())
                         .append(":")
                         .append(LocalDateTime.now().toString())
                         .toString()
