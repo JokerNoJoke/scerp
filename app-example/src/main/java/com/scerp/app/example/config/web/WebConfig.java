@@ -6,6 +6,7 @@ import com.scerp.app.example.config.web.interceptor.WebDeferredResultProcessingI
 import com.scerp.app.example.config.web.interceptor.WebHandlerInterceptor;
 import com.scerp.app.example.config.web.share.WebShareParameter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.format.datetime.DateFormatter;
@@ -17,7 +18,6 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.util.List;
-import java.util.concurrent.ThreadPoolExecutor;
 
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
@@ -34,24 +34,16 @@ public class WebConfig implements WebMvcConfigurer {
     }
 
     @Autowired
+    @Qualifier("webAsyncThreadPool")
+    private ThreadPoolTaskExecutor webAsyncThreadPool;
+    @Autowired
     private WebCallableProcessingInterceptor webCallableProcessingInterceptor;
     @Autowired
     private WebDeferredResultProcessingInterceptor webDeferredResultProcessingInterceptor;
 
     @Override
     public void configureAsyncSupport(AsyncSupportConfigurer configurer) {
-        ThreadPoolTaskExecutor webThreadPool = new ThreadPoolTaskExecutor();
-        webThreadPool.setThreadNamePrefix("TP-WEB-");
-        webThreadPool.setCorePoolSize(6);
-        webThreadPool.setMaxPoolSize(666);
-        webThreadPool.setKeepAliveSeconds(666);
-        webThreadPool.setAllowCoreThreadTimeOut(false);
-        webThreadPool.setQueueCapacity(1024);
-        webThreadPool.setWaitForTasksToCompleteOnShutdown(true);
-        webThreadPool.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
-        webThreadPool.initialize();
-
-        configurer.setTaskExecutor(webThreadPool)
+        configurer.setTaskExecutor(webAsyncThreadPool)
                 .setDefaultTimeout(6666)
                 .registerCallableInterceptors(webCallableProcessingInterceptor)
                 .registerDeferredResultInterceptors(webDeferredResultProcessingInterceptor);
