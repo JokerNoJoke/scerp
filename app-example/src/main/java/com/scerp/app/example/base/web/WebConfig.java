@@ -1,10 +1,10 @@
-package com.scerp.app.example.config.web;
+package com.scerp.app.example.base.web;
 
-import com.scerp.app.example.config.web.interceptor.WebAsyncHandlerInterceptor;
-import com.scerp.app.example.config.web.interceptor.WebCallableProcessingInterceptor;
-import com.scerp.app.example.config.web.interceptor.WebDeferredResultProcessingInterceptor;
-import com.scerp.app.example.config.web.interceptor.WebHandlerInterceptor;
-import com.scerp.app.example.config.web.share.WebShareParameter;
+import com.scerp.app.example.base.web.interceptor.WebAsyncHandlerInterceptor;
+import com.scerp.app.example.base.web.interceptor.WebCallableProcessingInterceptor;
+import com.scerp.app.example.base.web.interceptor.WebDeferredResultProcessingInterceptor;
+import com.scerp.app.example.base.web.interceptor.WebHandlerInterceptor;
+import com.scerp.app.example.base.web.share.WebShareParameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Configuration;

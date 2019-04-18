@@ -1,4 +1,4 @@
-package com.scerp.app.example.config;
+package com.scerp.app.example.base;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

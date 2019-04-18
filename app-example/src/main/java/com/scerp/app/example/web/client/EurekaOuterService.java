@@ -1,6 +1,6 @@
 package com.scerp.app.example.web.client;
 
-import com.scerp.app.example.config.web.WebClientConfig;
+import com.scerp.app.example.base.web.WebClientConfig;
 import com.scerp.app.example.model.entity.IPInfo;
 import com.scerp.app.example.web.client.fallback.EurekaOuterServiceFallback;
 import org.springframework.cloud.openfeign.FeignClient;

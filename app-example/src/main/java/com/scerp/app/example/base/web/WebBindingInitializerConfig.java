@@ -1,4 +1,4 @@
-package com.scerp.app.example.config.web;
+package com.scerp.app.example.base.web;
 
 import org.jsoup.Jsoup;
 import org.jsoup.safety.Whitelist;

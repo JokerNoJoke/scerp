@@ -1,4 +1,4 @@
-package com.scerp.app.example.config.task;
+package com.scerp.app.example.base.task;
 
 import org.springframework.aop.interceptor.AsyncUncaughtExceptionHandler;
 import org.springframework.aop.interceptor.SimpleAsyncUncaughtExceptionHandler;

@@ -2,7 +2,7 @@ package com.scerp.app.example.web.service;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
-import com.scerp.app.example.config.web.exception.AppException;
+import com.scerp.app.example.base.web.exception.AppException;
 import org.springframework.stereotype.Service;
 
 /**

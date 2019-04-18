@@ -1,4 +1,4 @@
-package com.scerp.app.example.config.web.share;
+package com.scerp.app.example.base.web.share;
 
 import org.springframework.core.MethodParameter;
 import org.springframework.stereotype.Component;

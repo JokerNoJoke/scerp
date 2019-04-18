@@ -1,4 +1,4 @@
-package com.scerp.app.example.config.web;
+package com.scerp.app.example.base.web;
 
 import com.netflix.loadbalancer.IPing;
 import com.netflix.loadbalancer.IRule;

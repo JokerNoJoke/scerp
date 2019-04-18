@@ -1,4 +1,4 @@
-package com.scerp.app.example.config.task;
+package com.scerp.app.example.base.task;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

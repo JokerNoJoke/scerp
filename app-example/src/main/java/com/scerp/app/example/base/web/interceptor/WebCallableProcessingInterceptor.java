@@ -1,4 +1,4 @@
-package com.scerp.app.example.config.web.interceptor;
+package com.scerp.app.example.base.web.interceptor;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.NativeWebRequest;

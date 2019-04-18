@@ -1,4 +1,4 @@
-package com.scerp.app.example.config.web.exception;
+package com.scerp.app.example.base.web.exception;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 

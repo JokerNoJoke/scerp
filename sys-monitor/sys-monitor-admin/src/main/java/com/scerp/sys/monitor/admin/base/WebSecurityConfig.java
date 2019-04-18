@@ -1,4 +1,4 @@
-package com.scerp.sys.monitor.admin.config;
+package com.scerp.sys.monitor.admin.base;
 
 import de.codecentric.boot.admin.server.config.AdminServerProperties;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
